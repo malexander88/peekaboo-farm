@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#8fd3ff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Peekaboo Farm</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#8fd3ff;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+canvas{display:block;position:fixed;left:0;top:0;width:100%;height:100%}
+#credits{position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));font:600 10px/1.2 system-ui,sans-serif;color:rgba(30,60,30,.55);background:none;border:0;padding:4px;z-index:3;cursor:pointer}
+#musicCredit{position:fixed;left:max(8px,env(safe-area-inset-left));bottom:max(6px,env(safe-area-inset-bottom));font:600 9px/1.25 system-ui,sans-serif;color:rgba(30,50,20,.42);z-index:3;pointer-events:none;max-width:46vw}
+#creditPanel{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);max-width:min(92vw,560px);max-height:80vh;overflow:auto;background:rgba(255,255,255,.96);border-radius:18px;padding:14px 18px;font:12px/1.45 system-ui,sans-serif;color:#234;z-index:4;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+#creditPanel h3{margin:.2em 0 .5em;font-size:15px}
+#creditPanel p{margin:.3em 0}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="musicCredit">"Fluffing a Duck" Kevin MacLeod (incompetech.com) · CC BY 4.0</div>
+<button id="credits" aria-label="Sound credits">ⓘ sounds</button>
+<div id="creditPanel"></div>

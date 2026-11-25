@@ -1,0 +1,79 @@
+Peekaboo Farm - sound sources and licences
+============================================
+
+Animal clips were trimmed to ~1-2.6 s, high-passed, loudness-normalised, some sped up/pitched up for a cartoon feel,
+converted to mono 80 kbps MP3 and embedded (base64) in index.html. Processing: sounds/process.py. The rabbit hop/squeak
+and the in-game surprise effects (butterfly flutter, boo, giggle, rustle) were synthesised for this game.
+
+Attribution required for: Pig (CC BY 3.0, Vinrax) and the background music (CC BY 4.0, Kevin MacLeod).
+Everything else is CC0 / public domain; BigSoundBank credit given as a courtesy ("Additional sounds: Joseph Sardin and DenisChardonnet - BigSoundBank.com").
+
+dog       | recording
+          "Barking Dogs (#0288)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/barking-dogs-s0288.html
+
+cat       | recording
+          "Small mewing of a cat (#0098)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/small-mewing-of-a-cat-s0098.html
+
+duck      | recording
+          "Ducks (#0276)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/ducks-s0276.html
+
+cow       | recording
+          "Cow Moos #6 (#2386)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/cow-moos-6-s2386.html
+
+pig       | recording (rubber pig toy, sped up by the author)
+          "Pig SFX Pack (pig_idle, pig_idle4)" by Vinrax, OpenGameArt.org
+          Licence: CC BY 3.0
+          Source: https://opengameart.org/content/pig-sfx-pack
+
+horse     | recording
+          "Neighing of a Horse #1 (#0284)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/neighing-of-a-horse-1-s0284.html
+
+chicken   | recording
+          "Hens Lays (#0978)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/hens-lays-s0978.html
+
+chick     | recording
+          "Chick 1 (Stuffings) (#0430)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/chick-1-stuffings-s0430.html
+
+sheep     | recording
+          "Sheep #4 and #2 (#2346, #2344)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/sheep-4-s2346.html + https://bigsoundbank.com/sheep-2-s2344.html
+
+goat      | recording
+          "Bleating Goat #1 and #2 (#0279, #0280)" by DenisChardonnet, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/bleating-goat-1-s0279.html + https://bigsoundbank.com/bleating-goat-2-s0280.html
+
+donkey    | recording
+          "Donkey, Braying #3 (#1551)" by Joseph Sardin, BigSoundBank.com
+          Licence: CC0 1.0
+          Source: https://bigsoundbank.com/donkey-braying-3-s1551.html
+
+rabbit    | synthesised
+          "Cute hop and squeak (synthesised)" by made for this game
+          Licence: CC0 1.0
+
+Background music:
+          "Fluffing a Duck" by Kevin MacLeod (incompetech.com)
+          Licence: CC BY 4.0
+          Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768
+
+Licence texts: CC0 https://creativecommons.org/publicdomain/zero/1.0/ ; CC BY 3.0 https://creativecommons.org/licenses/by/3.0/ ;
+CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ . Changes were made to recorded clips (trim, filter, normalise, speed/pitch)
+and the music was faded and re-encoded at 80 kbps.
+
+Artwork and code: drawn procedurally in canvas for this game (no third-party art).

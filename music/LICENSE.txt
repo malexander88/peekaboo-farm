@@ -1,0 +1,16 @@
+Background music used in Peekaboo Farm
+======================================
+
+Track:   "Fluffing a Duck"
+Artist:  Kevin MacLeod (incompetech.com)
+Source:  https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100768
+         (mp3: https://incompetech.com/music/royalty-free/mp3-royaltyfree/Fluffing%20a%20Duck.mp3)
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+         https://creativecommons.org/licenses/by/4.0/
+Attribution (shown faintly in the game, and in the sound-credits panel):
+  "Fluffing a Duck" Kevin MacLeod (incompetech.com)
+  Licensed under Creative Commons: By Attribution 4.0 License
+  http://creativecommons.org/licenses/by/4.0/
+
+Embedded file: fluffing-a-duck-loop.mp3
+  Re-encoded with ffmpeg at 80 kbps stereo, with a short fade in and fade out.

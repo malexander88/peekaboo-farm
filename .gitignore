@@ -1,0 +1,10 @@
+android-keys/
+android/work-tmp/
+*.jks
+*.keystore
+KEYSTORE-INFO.txt
+sounds/raw/
+sounds/clips/*.wav
+apk/
+test/
+music/fluffing-a-duck-kevin-macleod.mp3

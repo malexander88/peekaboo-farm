@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><body style="margin:0;background:transparent"><canvas id="x"></canvas>
+<script src="../../src/02_draw.js"></script><script src="../../src/03_animals.js"></script>
+<script>
+function render(size, withBg, pad) {
+  const cv = document.getElementById('x'); cv.width = cv.height = size; const g = cv.getContext('2d'); c = g;
+  g.clearRect(0, 0, size, size);
+  if (withBg) {
+    g.save(); g.beginPath(); g.roundRect(0, 0, size, size, size * 0.22); g.clip();
+    const sk = g.createLinearGradient(0, 0, 0, size);
+    sk.addColorStop(0, '#5ec2ff'); sk.addColorStop(0.55, '#bdeeff'); sk.addColorStop(0.55, '#78d158'); sk.addColorStop(1, '#4fae3e');
+    g.fillStyle = sk; g.fillRect(0, 0, size, size);
+    g.beginPath(); g.ellipse(size * 0.5, size * 0.68, size * 0.7, size * 0.08, 0, 0, Math.PI * 2); g.fillStyle = '#86cf62'; g.fill();
+    g.restore();
+  }
+  const inner = size * (1 - 2 * pad), k = inner / 200;
+  // rabbit peeking: only the head + ears, clipped by a bush drawn after
+  g.save();
+  g.translate(size / 2, size * 0.78);
+  g.scale(k, k);
+  const P = { t: 1.3, blink: 1, mouth: 0, ear: 0.35, tail: 0.3, wing: 0, step: 0, lookX: 0, lookY: 0.15, pop: 0.1, squeeze: false, armUp: 0 };
+  ANIMAL_BY_ID.rabbit.draw(P);
+  g.restore();
+  // bush in front, covering the body
+  const s = size * 0.42, bx = size / 2, by = size * 0.86;
+  const blobs = [[0, -0.15, 0.72, '#4caf3a'], [-0.5, 0.05, 0.58, '#3d9a30'], [0.5, 0.08, 0.6, '#58c046'], [-0.15, -0.4, 0.48, '#6ed456'], [0.28, -0.38, 0.5, '#46a836']];
+  for (const [ox, oy, r, col] of blobs) {
+    const px = bx + ox * s, py = by + oy * s, rr = r * s;
+    g.beginPath(); g.arc(px, py, rr, 0, Math.PI * 2);
+    const gd = g.createRadialGradient(px - rr * 0.3, py - rr * 0.4, rr * 0.1, px, py, rr);
+    gd.addColorStop(0, shade(col, 0.28)); gd.addColorStop(1, shade(col, -0.2));
+    g.fillStyle = gd; g.fill();
+    g.strokeStyle = shade(col, -0.45); g.lineWidth = Math.max(1.2, size * 0.008); g.stroke();
+  }
+  // little flowers
+  g.fillStyle = '#ff7eb3';
+  for (const [fx, fy] of [[0.32, 0.72], [0.68, 0.78]]) {
+    for (let k2 = 0; k2 < 5; k2++) { const a = k2 / 5 * Math.PI * 2; g.beginPath(); g.arc(size * fx + Math.cos(a) * size * 0.025, size * fy + Math.sin(a) * size * 0.025, size * 0.02, 0, Math.PI * 2); g.fill(); }
+    g.fillStyle = '#ffcc33'; g.beginPath(); g.arc(size * fx, size * fy, size * 0.015, 0, Math.PI * 2); g.fill(); g.fillStyle = '#ff7eb3';
+  }
+  return cv.toDataURL('image/png');
+}
+</script></body></html>
